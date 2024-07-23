@@ -1,0 +1,37 @@
+kubernetes-dashboard:
+  api:
+    containers:
+      # Extend token duration
+      args:
+        - --token-ttl=86400
+
+      # Minimize resource usage
+      resources:
+        requests:
+          cpu: 20m
+          memory: 50Mi
+        limits:
+          cpu: 100m
+          memory: 100Mi
+
+  web:
+    # Minimize resource usage
+    containers:
+      resources:
+        requests:
+          cpu: 20m
+          memory: 50Mi
+        limits:
+          cpu: 100m
+          memory: 150Mi
+
+  metricsScraper:
+    # Minimize resource usage
+    containers:
+      resources:
+        requests:
+          cpu: 20m
+          memory: 50Mi
+        limits:
+          cpu: 50m
+          memory: 100Mi

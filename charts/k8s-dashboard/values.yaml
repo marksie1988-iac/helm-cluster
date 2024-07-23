@@ -1,0 +1,12 @@
+kubernetes-dashboard:
+  # Disable all extra bits, since they
+  # will usually be installed externally.
+  nginx:
+    enabled: false
+
+  cert-manager:
+    enabled: false
+    installCRDs: false
+
+  metrics-server:
+    enabled: false
