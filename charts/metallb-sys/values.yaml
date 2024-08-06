@@ -1,0 +1,14 @@
+metallb:
+  # If CRDs are installed alongside this chart, Helm doesn't
+  # apply them before other resources, leading to a `resource
+  # mapping not found`; therefore CRDs have to be installed
+  # manually. As a result, they are disabled here.
+  crds:
+    enabled: true
+
+  speaker:
+    tolerations:
+    - effect: NoSchedule
+      key: kubernetes.io/arch
+      operator: Equal
+      value: arm64

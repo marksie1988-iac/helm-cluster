@@ -1,0 +1,4 @@
+apiVersion: v2
+name: metallb-conf
+description: Configures MetalLB
+version: 0.1.0
