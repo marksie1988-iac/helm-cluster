@@ -5,4 +5,4 @@ version: 0.1.0
 dependencies:
 - name: Kubernetes-dashboard
   repository: https://kubernetes.github.io/dashboard
-  version: "*"
+  version: "7.5.0"
