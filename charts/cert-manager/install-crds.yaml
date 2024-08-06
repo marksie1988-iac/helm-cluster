@@ -1,0 +1,2 @@
+#!/bin/bash
+kubectl create -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cert-manager.crds.yaml || kubectl replace -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cert-manager.crds.yaml
