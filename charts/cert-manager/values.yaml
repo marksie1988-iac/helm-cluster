@@ -3,7 +3,7 @@ cert-manager:
   # apply them before other resources, leading to a `resource
   # mapping not found`; therefore CRDs have to be installed
   # manually. As a result, they are disabled here.
-  installCRDs: false
+  installCRDs: true
 
 acme:
   email: letsencrypt@totaldebug.uk
