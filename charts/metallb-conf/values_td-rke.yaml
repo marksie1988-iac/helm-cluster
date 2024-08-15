@@ -1,12 +1,12 @@
 local:
   pools:
-    - name: metallb
-      addresses:
-        - 172.16.100.0/24
-      bgpAdvertise: true
+  - name: metallb
+    addresses:
+    - 172.16.100.1-172.16.100.254
+    bgpAdvertise: true
 
   clusterASN: 64513
   peers:
-    - name: opnsense
-      asn: 64512
-      address: 172.16.20.1
+  - name: opnsense
+    asn: 64512
+    address: 172.16.20.1
