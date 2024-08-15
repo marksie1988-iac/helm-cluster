@@ -1,0 +1,11 @@
+{{- range $peer := .Values.local.peers -}}
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: bgppeer-{{ $peer.name }}
+spec:
+  myASN: {{ $.Values.local.clusterASN }}
+  peerASN: {{ $peer.asn }}
+  peerAddress: {{ $peer.address }}
+---
+{{ end }}

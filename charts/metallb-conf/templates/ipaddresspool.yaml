@@ -1,0 +1,10 @@
+{{- range $pool := .Values.local.pools -}}
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: {{ $pool.name }}-pool
+spec:
+  addresses:
+  {{- toYaml $pool.addresses | nindent 4 }}
+---
+{{ end }}
