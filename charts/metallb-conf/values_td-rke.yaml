@@ -5,7 +5,7 @@ local:
     - 172.16.100.1-172.16.100.254
     bgpAdvertise: true
 
-  clusterASN: 64515
+  clusterASN: 64513
   peers:
   - name: opnsense
     asn: 64514
