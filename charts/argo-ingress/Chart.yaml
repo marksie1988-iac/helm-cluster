@@ -1,0 +1,4 @@
+apiVersion: v2
+name: argo-ingress
+description: Sets the ArgoCD Ingress
+version: 0.1.0

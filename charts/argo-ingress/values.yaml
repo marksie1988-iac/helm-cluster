@@ -1,0 +1,11 @@
+argocd:
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      acme.cert-manager.io/http01-edit-in-place: "true"
+    className: nginx
+    host: argo.cloud.marksiesplace.co.uk
+    tls:
+    - hosts:
+      - argo.cloud.marksiesplace.co.uk
+      secretName: argocd-cert
